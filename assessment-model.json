@@ -1,0 +1,193 @@
+{
+  "schema_version": "1.0.0",
+  "assessment": {
+    "id": "b2b-pricing-execution-maturity-assessment",
+    "title": "B2B Pricing Execution Maturity Assessment",
+    "subtitle": "A focused module of the Configure to WIN Quote Performance Scan",
+    "version": "1.0.0",
+    "released": "2026-08-30",
+    "publisher": "Configure to WIN",
+    "official_url": "https://configure.win/resources/pricing-maturity-assessment",
+    "full_scan_url": "https://configure.win/quote-performance-scan",
+    "license": "CC-BY-4.0",
+    "overall_score": false,
+    "benchmark": false
+  },
+  "response_scale": [
+    { "value": 0, "label": "Ad hoc or manual" },
+    { "value": 1, "label": "Partly defined" },
+    { "value": 2, "label": "Documented but inconsistent" },
+    { "value": 3, "label": "System-supported and governed" },
+    { "value": 4, "label": "Measured and continuously improved" }
+  ],
+  "thresholds": [
+    { "minimum": 0.0, "maximum": 0.79, "level": "Reactive" },
+    { "minimum": 0.8, "maximum": 1.59, "level": "Emerging" },
+    { "minimum": 1.6, "maximum": 2.39, "level": "Established" },
+    { "minimum": 2.4, "maximum": 3.19, "level": "Advanced" },
+    { "minimum": 3.2, "maximum": 4.0, "level": "Intelligent" }
+  ],
+  "calculation": {
+    "statements_per_dimension": 2,
+    "statement_weighting": "equal",
+    "current_average": "Calculate only when both current-state statements in the dimension are answered.",
+    "target_average": "Calculate only when both optional target-state statements in the dimension are answered.",
+    "gap": "target_average - current_average",
+    "priority_gate": "Show priority ranks only when all twelve current-state statements are answered.",
+    "priority_order": "Ascending current dimension average, then fixed dimension order.",
+    "highlighted_priorities": 2,
+    "aggregate_across_dimensions": false
+  },
+  "questions": [
+    { "id": "Q01", "dimension_id": "pricing-data-foundation", "order": 1, "statement": "Current list, cost, floor and currency data is available before quoting begins.", "weight": 1 },
+    { "id": "Q02", "dimension_id": "pricing-data-foundation", "order": 2, "statement": "Your team can identify the correct source and version of each commercial value.", "weight": 1 },
+    { "id": "Q03", "dimension_id": "customer-specific-and-contracted-pricing", "order": 1, "statement": "Current account- and product-specific price agreements are available inside the quote context.", "weight": 1 },
+    { "id": "Q04", "dimension_id": "customer-specific-and-contracted-pricing", "order": 2, "statement": "Deviations from existing customer prices are calculated explicitly.", "weight": 1 },
+    { "id": "Q05", "dimension_id": "calculations-and-deal-economics", "order": 1, "statement": "Discounts, margins, rebates and incentives are calculated consistently.", "weight": 1 },
+    { "id": "Q06", "dimension_id": "calculations-and-deal-economics", "order": 2, "statement": "Sales, pricing and finance use the same commercial calculation logic.", "weight": 1 },
+    { "id": "Q07", "dimension_id": "price-execution", "order": 1, "statement": "The applicable price is used consistently in each quote.", "weight": 1 },
+    { "id": "Q08", "dimension_id": "price-execution", "order": 2, "statement": "Manual price overrides remain visible and controlled.", "weight": 1 },
+    { "id": "Q09", "dimension_id": "exception-and-approval-governance", "order": 1, "statement": "Defined conditions determine when pricing approval is required.", "weight": 1 },
+    { "id": "Q10", "dimension_id": "exception-and-approval-governance", "order": 2, "statement": "Approval authority and routing are applied consistently.", "weight": 1 },
+    { "id": "Q11", "dimension_id": "traceability-and-performance-visibility", "order": 1, "statement": "Source values, calculations, rules and decisions can be reconstructed.", "weight": 1 },
+    { "id": "Q12", "dimension_id": "traceability-and-performance-visibility", "order": 2, "statement": "Management can identify recurring pricing exceptions, leakage and control gaps.", "weight": 1 }
+  ],
+  "dimensions": [
+    {
+      "id": "pricing-data-foundation",
+      "order": 1,
+      "name": "Pricing data foundation",
+      "questions": ["Q01", "Q02"],
+      "evidence_examples": ["Controlled price-source register", "Source ownership", "Effective-date history", "Currency rule", "Freshness report", "Sample quote trace"],
+      "maturity_descriptions": {
+        "Reactive": "List, cost, floor and currency values are gathered manually from scattered sources. The correct source and version depend on individual knowledge.",
+        "Emerging": "Some sources and owners are identified, but teams still use local copies, incomplete records or manual version checks.",
+        "Established": "Source definitions and update responsibilities are documented and repeatable, but effective dates, freshness or quote-time enforcement remain inconsistent.",
+        "Advanced": "Governed sources are resolved systematically with ownership, effective dates, currency treatment and traceable selected values.",
+        "Intelligent": "Source freshness, usage and failures are measured; drift and stale records are reviewed and controls are improved using evidence."
+      },
+      "next_controls": {
+        "Reactive": "Assign owners and register the approved list, cost, floor and currency sources used before quoting.",
+        "Emerging": "Document source, version, effective-date and update standards and apply them across the selected quote scope.",
+        "Established": "Enforce source resolution and freshness checks systematically and capture missing or stale-data exceptions.",
+        "Advanced": "Measure source freshness, usage and failure patterns and manage a feedback loop with data owners.",
+        "Intelligent": "Maintain governance, monitor source drift and refine controls using freshness, error and usage evidence."
+      }
+    },
+    {
+      "id": "customer-specific-and-contracted-pricing",
+      "order": 2,
+      "name": "Customer-specific and contracted pricing",
+      "questions": ["Q03", "Q04"],
+      "evidence_examples": ["Contracted-price record", "Account and product scope", "Effective dates", "Approval source", "Deviation calculation", "Override log"],
+      "maturity_descriptions": {
+        "Reactive": "Agreements are stored in emails, spreadsheets or previous quotes and must be found and interpreted manually.",
+        "Emerging": "Selected agreements are recorded, but coverage, scope, effective dates or use in quoting remain incomplete or locally managed.",
+        "Established": "Agreement records, scope and validity are documented and used repeatably, but application and deviation control are not consistently enforced.",
+        "Advanced": "The applicable account- and product-specific price is resolved in the quote context; deviations and overrides are calculated, governed and traceable.",
+        "Intelligent": "Agreement quality, expiry, deviation and override patterns are reviewed and used to improve maintenance and execution controls."
+      },
+      "next_controls": {
+        "Reactive": "Create a controlled register for account- and product-specific agreements, including value, scope, currency and effective dates.",
+        "Emerging": "Document agreement maintenance and quote-time lookup standards and apply them consistently across the selected scope.",
+        "Established": "Resolve applicable agreements systematically and calculate deviations and overrides as controlled exceptions.",
+        "Advanced": "Measure expiry, deviation and override patterns and create a managed feedback loop with agreement owners.",
+        "Intelligent": "Maintain governance, monitor agreement drift and refine maintenance and execution controls using evidence."
+      }
+    },
+    {
+      "id": "calculations-and-deal-economics",
+      "order": 3,
+      "name": "Calculations and deal economics",
+      "questions": ["Q05", "Q06"],
+      "evidence_examples": ["Calculation specification", "Formula version", "Source mapping", "Reconciliation report", "Sample calculation trace"],
+      "maturity_descriptions": {
+        "Reactive": "Discounts, margins, rebates and incentives are calculated in person-owned spreadsheets or with inconsistent definitions.",
+        "Emerging": "Shared templates or common formulas exist for some quotes, but manual exceptions and competing definitions remain.",
+        "Established": "Calculation definitions are documented and repeatable, but they are not enforced consistently across teams, quote types or systems.",
+        "Advanced": "Governed formulas use traceable inputs to calculate discounts, margins, rebates, incentives and other deal measures systematically.",
+        "Intelligent": "Calculation outcomes, exceptions and formula performance are reconciled and reviewed; definitions are refined through a managed feedback loop."
+      },
+      "next_controls": {
+        "Reactive": "Agree ownership and one controlled calculation specification for discounts, margins, rebates and incentives.",
+        "Emerging": "Document calculation definitions, sources and rounding and apply them consistently across the selected quote scope.",
+        "Established": "Enforce governed formulas systematically and capture calculation exceptions and source failures.",
+        "Advanced": "Reconcile calculated and realised outcomes and manage a feedback loop for definitions and assumptions.",
+        "Intelligent": "Maintain formula governance, monitor drift and refine calculation controls using reconciled evidence."
+      }
+    },
+    {
+      "id": "price-execution",
+      "order": 4,
+      "name": "Price execution",
+      "questions": ["Q07", "Q08"],
+      "evidence_examples": ["Quote sample", "Price-resolution trace", "Override log", "Reason codes", "Release check", "Exception report"],
+      "maturity_descriptions": {
+        "Reactive": "The applied price is selected or overridden manually, with limited visibility into why it was used.",
+        "Emerging": "Pricing guidance exists, but adoption is local and manual overrides are not recorded consistently.",
+        "Established": "Standard price-selection and override practices are documented and repeatable, but enforcement differs by team or workflow.",
+        "Advanced": "The applicable price is applied systematically; overrides require defined context and remain visible, controlled and traceable.",
+        "Intelligent": "Execution accuracy, override patterns and leakage are measured and used to refine price-selection and exception controls."
+      },
+      "next_controls": {
+        "Reactive": "Define how the applicable price is selected and the minimum reason and authority evidence for a manual override.",
+        "Emerging": "Document price-selection and override standards and apply them consistently across the selected workflow.",
+        "Established": "Enforce applicable-price resolution and override capture systematically before quote release.",
+        "Advanced": "Measure override frequency, execution accuracy and leakage and manage a feedback loop with control owners.",
+        "Intelligent": "Maintain execution governance, monitor drift and refine price and override controls using evidence."
+      }
+    },
+    {
+      "id": "exception-and-approval-governance",
+      "order": 5,
+      "name": "Exception and approval governance",
+      "questions": ["Q09", "Q10"],
+      "evidence_examples": ["Approval policy", "Approval matrix", "Rule version", "Authority record", "Workflow log", "Reapproval test"],
+      "maturity_descriptions": {
+        "Reactive": "Approval depends on judgement, email and individual availability; triggers and authority are unclear.",
+        "Emerging": "Some thresholds and roles are defined, but routing and application vary by team, deal or reviewer.",
+        "Established": "Approval policy, authority and routing are documented and repeatable, but enforcement, evidence or reapproval remains inconsistent.",
+        "Advanced": "Governed rules apply authority, routing and reapproval systematically and preserve the decision context and outcome.",
+        "Intelligent": "Approval outcomes, timing, false positives, exceptions and rule drift are measured and used to refine controlled routing."
+      },
+      "next_controls": {
+        "Reactive": "Document the minimum pricing triggers, decision authority and evidence required for an approval decision.",
+        "Emerging": "Standardise approval conditions, authority, routing and reapproval rules across the selected quote scope.",
+        "Established": "Enforce approval routing and reapproval systematically and capture rule, reviewer and outcome evidence.",
+        "Advanced": "Measure routing outcomes, delay, false positives and rule drift and manage a controlled feedback loop.",
+        "Intelligent": "Maintain approval governance, monitor policy drift and refine exception rules using decision evidence."
+      }
+    },
+    {
+      "id": "traceability-and-performance-visibility",
+      "order": 6,
+      "name": "Traceability and performance visibility",
+      "questions": ["Q11", "Q12"],
+      "evidence_examples": ["Decision trace", "Exception report", "Dashboard definition", "Audit sample", "Leakage analysis", "Improvement log"],
+      "maturity_descriptions": {
+        "Reactive": "Source values, calculations, rules and decisions cannot be reconstructed reliably; reporting is manual and retrospective.",
+        "Emerging": "Some evidence is retained, but source, calculation, approval and reporting records remain fragmented.",
+        "Established": "Required evidence and reporting definitions are documented and repeatable, but traces or management views are incomplete.",
+        "Advanced": "A connected decision trace links inputs, calculations, rules and approvals, while recurring pricing exceptions are visible to management.",
+        "Intelligent": "Exception, leakage and control-gap trends are monitored; completed improvements and emerging drift are reviewed using evidence."
+      },
+      "next_controls": {
+        "Reactive": "Define the minimum source, calculation, rule and decision evidence that must remain reconstructable.",
+        "Emerging": "Document trace and reporting standards and apply them consistently across the selected quote scope.",
+        "Established": "Connect decision evidence systematically and capture recurring pricing exceptions and control gaps.",
+        "Advanced": "Measure exception, leakage and control-gap trends and manage an evidence-led improvement loop.",
+        "Intelligent": "Maintain trace governance, monitor reporting drift and refine controls using completed-action and outcome evidence."
+      }
+    }
+  ],
+  "limitations": [
+    "Results are based only on the answers entered by the user.",
+    "The assessment does not provide an industry or market benchmark.",
+    "It does not calculate an overall pricing or Quote Performance Score.",
+    "It does not compare the organisation with other participants.",
+    "It does not assess willingness-to-pay, packaging strategy or market price optimisation.",
+    "It does not recommend a product, vendor or implementation architecture.",
+    "Target-state gaps are planning inputs, not proof of business impact.",
+    "Use of the downloaded workbook does not by itself submit entered data to Configure to WIN."
+  ]
+}
