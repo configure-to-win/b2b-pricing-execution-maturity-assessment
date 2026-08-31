@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this workbook, please cite it using these metadata."
+title: "B2B Pricing Execution Maturity Assessment"
+authors:
+  - name: "Configure to WIN"
+version: 1.0.0
+date-released: "2026-08-30"
+license: CC-BY-4.0
+repository-code: "https://github.com/configure-to-win/b2b-pricing-execution-maturity-assessment"
+url: "https://configure.win/resources/pricing-maturity-assessment"
