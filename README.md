@@ -8,8 +8,8 @@ The assessment is a focused module of the Configure to WIN Quote Performance Sca
 
 - [Download the latest versioned release](https://github.com/configure-to-win/b2b-pricing-execution-maturity-assessment/releases/latest)
 - [Open the Excel workbook](template/b2b-pricing-execution-maturity-assessment.xlsx)
-- [View the assessment and methodology](https://configure.win/resources/pricing-maturity-assessment?utm_source=github&utm_medium=referral&utm_campaign=pricing_maturity_assessment)
-- [Complete the full Quote Performance Scan](https://configure.win/quote-performance-scan?utm_source=github&utm_medium=referral&utm_campaign=pricing_maturity_assessment)
+- [View the assessment and methodology](https://configure.win/resources/pricing-maturity-assessment)
+- [Complete the full Quote Performance Scan](https://configure.win/quote-performance-scan)
 - [Review the shareable maturity matrix](preview/pricing-execution-maturity-matrix.pdf)
 
 ## What the workbook assesses
