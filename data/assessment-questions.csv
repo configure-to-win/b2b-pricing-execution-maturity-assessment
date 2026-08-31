@@ -1,0 +1,13 @@
+question_id,dimension_order,dimension_id,dimension,statement,statement_order,minimum_value,maximum_value,weight
+Q01,1,pricing-data-foundation,Pricing data foundation,"Current list, cost, floor and currency data is available before quoting begins.",1,0,4,1
+Q02,1,pricing-data-foundation,Pricing data foundation,Your team can identify the correct source and version of each commercial value.,2,0,4,1
+Q03,2,customer-specific-and-contracted-pricing,Customer-specific and contracted pricing,Current account- and product-specific price agreements are available inside the quote context.,1,0,4,1
+Q04,2,customer-specific-and-contracted-pricing,Customer-specific and contracted pricing,Deviations from existing customer prices are calculated explicitly.,2,0,4,1
+Q05,3,calculations-and-deal-economics,Calculations and deal economics,"Discounts, margins, rebates and incentives are calculated consistently.",1,0,4,1
+Q06,3,calculations-and-deal-economics,Calculations and deal economics,"Sales, pricing and finance use the same commercial calculation logic.",2,0,4,1
+Q07,4,price-execution,Price execution,The applicable price is used consistently in each quote.,1,0,4,1
+Q08,4,price-execution,Price execution,Manual price overrides remain visible and controlled.,2,0,4,1
+Q09,5,exception-and-approval-governance,Exception and approval governance,Defined conditions determine when pricing approval is required.,1,0,4,1
+Q10,5,exception-and-approval-governance,Exception and approval governance,Approval authority and routing are applied consistently.,2,0,4,1
+Q11,6,traceability-and-performance-visibility,Traceability and performance visibility,"Source values, calculations, rules and decisions can be reconstructed.",1,0,4,1
+Q12,6,traceability-and-performance-visibility,Traceability and performance visibility,"Management can identify recurring pricing exceptions, leakage and control gaps.",2,0,4,1
